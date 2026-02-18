@@ -1,0 +1,81 @@
+.grid-container {
+  background-color: rgb(230, 108, 108);
+  padding: 1rem;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 2rem;
+  grid-template-areas:
+    "first second second"
+    "third third forth"
+    "fifth sixth forth"
+}
+
+.first{
+  background-color: aqua;
+  grid-area: first;
+}
+
+.second {
+  background-color: blueviolet;
+  grid-area: second;
+}
+
+.third {
+  background-color: gray;
+  grid-area: third;
+}
+
+.forth {
+  background-color: green;
+  grid-area: forth;
+}
+
+.fifth{
+  background-color: crimson;
+  grid-area: fifth;
+}
+
+.sixth {
+  background-color: darkblue;
+  grid-area: sixth;
+}
+
+@media (max-width: 760px) {
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas: 
+      "first third"
+      "second second"
+      "fifth forth"
+      "sixth forth"
+  }
+}
+
+@media (max-width: 760px) {
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas: 
+      "first third"
+      "second second"
+      "fifth forth"
+      "sixth forth"
+  }
+}
+
+@media (max-width: 420px) {
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas: 
+      "first"
+      "second"
+      "third"
+      "forth"
+      "fifth"
+      "sixth"
+  }
+}
